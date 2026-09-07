@@ -3,6 +3,7 @@
   --linha2: #008062;
   --linha3: #EF4135;
   --linha4: #FFD400;
+  --linha5: #794E9F;
   --linha10: #007C8F;
   --linha11: #F04F22;
 	--ink: #111820;
@@ -129,6 +130,7 @@ body {
 .conexao.tarifada {
   background-color: var(--black);
   border: none;
+  margin-left: -2px;
 }
 
 .conexao.tarifada .estacao {
@@ -144,6 +146,13 @@ body {
   justify-content: center;
   line-height: 1;
   margin-left: 2px;
+}
+
+.rotate-45 {
+  position: relative;
+  left: 10px;
+  top: -10px;
+  transform: rotate(45deg);
 }
 
 .conexao .estacao.expresso-aeroporto {
@@ -164,6 +173,10 @@ body {
 
 .conexao .estacao.amarela {
   color: var(--linha4);
+}
+
+.conexao .estacao.lilas {
+  color: var(--linha5);
 }
 
 .conexao .estacao.turquesa {
