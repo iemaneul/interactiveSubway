@@ -1,0 +1,175 @@
+:root {
+	--linha1: #0053A0;
+  --linha2: #008062;
+  --linha3: #EF4135;
+  --linha4: #FFD400;
+  --linha10: #007C8F;
+  --linha11: #F04F22;
+	--ink: #111820;
+	--paper: #fdfdfc;
+	--muted: #66717a;
+  --white: #ffffff;
+  --black: #000000;
+}
+
+* { box-sizing: border-box; }
+
+body {
+	margin: 0;
+	min-width: 320px;
+	background: var(--paper);
+	color: var(--ink);
+	font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+}
+
+.linha-1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 10px;
+  margin: 0 auto;
+}
+
+.linha-1 .estacao {
+  width: 10px;
+  height: 15px;
+  color: #ffffff;
+  font-size: 15px;
+  text-align: center;
+  background-color: var(--linha1);
+}
+
+.linha-1 .diagonal-right-top > .estacao:first-of-type {
+  border-radius: 10px 10px 0 0;
+}
+
+.linha-1 span {
+  display: block;
+  width: 10px;
+  height: 15px;
+  background-color: var(--linha1);
+  z-index: -10;
+  position: relative;
+}
+
+.linha-1 > * + *,
+.linha-1 .diagonal-right-top > * + *,
+.linha-1 .diagonal-right-bottom > * + * {
+  margin-top: -1px;
+}
+
+.linha-1 .diagonal-right-top {
+  display: flex;
+  flex-direction: column;
+  width: 10px;
+  transform: rotate(45deg);
+}
+
+.linha-1 .diagonal-right-bottom {
+  display: flex;
+  flex-direction: column;
+  width: 10px;
+  transform: rotate(135deg);
+  margin-top: -40px;
+  margin-left: 34px;
+}
+
+.linha-1 .diagonal-right-top span + span {
+  margin-top: -1px;
+}
+
+.ml-87 {
+  margin-left: 87px;
+}
+
+.mb--21 {
+  margin-bottom: -21px;
+}
+
+.mt--7 {
+  margin-top: -7px;
+}
+
+.ml-70 {
+  margin-left: 70px;
+}
+
+.mt--20 {
+  margin-top: -20px;
+}
+
+.mb--10 {
+  margin-bottom: -10px;
+}
+
+.ml--2{
+  margin-left: -2px;
+}
+
+.z-1 {
+  z-index: 1;
+}
+
+.conexao {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 15px;
+  height: auto;
+  padding: 3px 6px;
+  background-color: var(--white);
+  border-radius: 10px;
+  border-right: 2px solid #CCCDCF;
+  gap: 2px;
+  z-index: 1;
+}
+
+.conexao.tarifada {
+  background-color: var(--black);
+  border: none;
+}
+
+.conexao.tarifada .estacao {
+  background-color: var(--black);
+  margin: 0px;
+}
+
+.conexao .estacao {
+  background-color: var(--white);
+  font-size: 17px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  margin-left: 2px;
+}
+
+.conexao .estacao.expresso-aeroporto {
+  color: var(--black);
+}
+
+.conexao .estacao.azul {
+  color: var(--linha1);
+}
+
+.conexao .estacao.verde {
+  color: var(--linha2);
+}
+
+.conexao .estacao.vermelha {
+  color: var(--linha3);
+}
+
+.conexao .estacao.amarela {
+  color: var(--linha4);
+}
+
+.conexao .estacao.turquesa {
+  color: var(--linha10);
+}
+
+.conexao .estacao.coral {
+  color: var(--linha11);
+}
