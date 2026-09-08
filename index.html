@@ -1,15 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
-  <title>Document</title>
+  <title>Linha 1 do metrô</title>
 </head>
 <body>
-  <div class="linha-1">
-    <div class="diagonal-right-top ml-87 mb--21">
-      <div class="conexao tarifada mb--21 z-1 ml--2 rotate-45">
+  <main class="mapa" aria-label="Mapa das linhas do metrô">
+  <div class="linha linha-1">
+    <div class="diagonal-right-top ramal-superior">
+      <div class="conexao tarifada conexao-tarifada-diagonal">
         <div class="estacao azul">●</div>
         <div class="estacao azul">●</div>
       </div>
@@ -32,7 +33,7 @@
     <span></span>
     <div class="estacao">●</div>
     <span></span>
-    <div class="conexao mt--7">
+    <div class="conexao conexao-da-linha">
       <div class="estacao expresso-aeroporto">●</div>
       <div class="estacao coral">●</div>
       <div class="estacao turquesa">●</div>
@@ -43,7 +44,7 @@
     <div class="estacao">●</div>
     <span></span>
     <span></span>
-    <div class="conexao mt--7">
+    <div class="conexao conexao-da-linha">
       <div class="estacao vermelha">●</div>
       <div class="estacao azul">●</div>
     </div>
@@ -55,7 +56,7 @@
     <span></span>
     <div class="estacao">●</div>
     <span></span>
-    <div class="conexao mt--7">
+    <div class="conexao conexao-da-linha">
       <div class="estacao azul">●</div>
       <div class="estacao verde">●</div>
     </div>
@@ -65,8 +66,8 @@
       <span></span>
       <span></span>
     </div>
-    <div class="ml-70 mt--20 z-1">
-      <div class="conexao mt--7 mb--10 z-1 ml--2">
+    <div class="ramal-inferior">
+      <div class="conexao conexao-do-ramal">
         <div class="estacao azul">●</div>
         <div class="estacao verde">●</div>
       </div>
@@ -75,7 +76,7 @@
       <div class="estacao">●</div>
       <span></span>
       <span></span>
-      <div class="conexao mt--7 mb--10 z-1 ml--2">
+      <div class="conexao conexao-do-ramal">
         <div class="estacao lilas">●</div>
         <div class="estacao azul">●</div>
       </div>
@@ -91,12 +92,106 @@
       <div class="estacao">●</div>
       <span></span>
       <span></span>
-      <div class="conexao tarifada mt--7 mb--10 z-1 ml--2">
+      <div class="conexao tarifada conexao-tarifada-final">
         <div class="estacao azul">●</div>
         <div class="estacao azul">●</div>
       </div>
     </div>
   </div>
+
+  <div class="linha linha-2">
+    <div class="rotate--45 p1">
+      <div class="estacao border-top-right">●</div>
+      <span></span>
+      <span></span>
+      <div class="estacao">●</div>
+      <span></span>
+      <span></span>
+      <div class="estacao">●</div>
+      <span></span>
+      <span></span>
+      <div class="conexao conexao-do-ramal">
+        <div class="estacao amarela">●</div>
+        <div class="estacao verde">●</div>
+      </div>
+      <span></span>
+    </div>
+    <div class="rotate--90 p2">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <div class="estacao">●</div>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <div class="estacao">●</div>
+      <span></span>
+      <span></span>
+    </div>
+    <div class="rotate--45 p3">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <div class="rotate--90 p4">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <div class="conexao conexao-da-linha">
+        <div class="estacao lilas">●</div>
+        <div class="estacao verde">●</div>
+      </div>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <div class="estacao">●</div>
+      <span></span>
+      <span></span>
+      <span></span>
+      <div class="estacao">●</div>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <div class="conexao tarifada verde-vertical">
+        <div class="estacao tiradentes">●</div>
+        <div class="estacao verde">●</div>
+      </div>
+    </div>
+    <div class="p5">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <div class="p6">
+      <div class="conexao conexao-da-linha">
+        <div class="estacao verde">●</div>
+        <div class="estacao turquesa">●</div>
+      </div>
+      <span></span>
+      <span></span>
+      <span></span>
+      <div class="conexao conexao-da-linha-tarifada">
+        <div class="conexao tarifada">
+          <div class="estacao tiradentes">●</div>
+          <div class="estacao verde">●</div>
+        </div>
+        <div class="estacao prata">●</div>
+      </div>
+    </div>
+  </div>
+  </main>
   
 </body>
 </html>
