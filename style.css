@@ -27,7 +27,6 @@ body {
   font-family: "Trebuchet MS", "Segoe UI", sans-serif;
 }
 
-/* Área fixa: a janela menor mostra o restante por rolagem. */
 .mapa {
   position: relative;
   width: 1920px;
@@ -55,8 +54,14 @@ body {
 
 .linha-2 {
   --cor-linha: var(--linha2);
-  left: 687.36px;
-  top: 356.256px;
+  left: 687px;
+  top: 356px;
+}
+
+.linha-3 {
+  --cor-linha: var(--linha3);
+  left: 960px;
+  top: 0;
 }
 
 .linha .estacao,
@@ -66,11 +71,27 @@ body {
 }
 
 .linha .estacao {
+  --diametro-bolinha: 6px;
+  position: relative;
   color: var(--white);
-  font-size: 15px;
+  font-size: 0;
   line-height: 15px;
   text-align: center;
   background-color: var(--cor-linha);
+}
+
+/* Círculo centralizado, independente do alinhamento do caractere ● na fonte. */
+.linha .estacao::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: var(--diametro-bolinha);
+  height: var(--diametro-bolinha);
+  border-radius: 50%;
+  background-color: currentColor;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
 }
 
 .linha span {
@@ -127,13 +148,14 @@ body {
 }
 
 .conexao .estacao {
+  --diametro-bolinha: 7px;
   display: flex;
   align-items: center;
   justify-content: center;
   width: 10px;
   height: 15px;
   color: var(--cor-linha);
-  font-size: 17px;
+  font-size: 0;
   line-height: 1;
   background-color: var(--white);
 }
@@ -284,4 +306,51 @@ body {
   top: 262px;
   position: absolute;
   left: 10px;
+}
+
+/* Linha 15: posição no mapa e ramais independentes em pixels. */
+.linha-15 {
+  --cor-linha: var(--linha15);
+  left: 1344.5px;
+  top: 443.5px;
+  z-index: 8;
+}
+
+.linha-15 > .p1,
+.linha-15 > .p2,
+.linha-15 > .p3 {
+  position: absolute;
+  width: 10px;
+  margin-top: 0;
+  transform-origin: 5px 0;
+}
+
+.linha-15 > .p1 {
+  top: 0;
+  left: 0;
+}
+
+.linha-15 > .p2 {
+  top: -1px;
+  left: 87.5px;
+  z-index: -1;
+}
+
+.linha-15 > .p3 {
+  top: 126px;
+  left: 212px;
+}
+
+.linha-15 span {
+  box-shadow: 0 -1px 0 var(--cor-linha), 0 1px 0 var(--cor-linha);
+}
+
+.linha-15 .p3 > .conexao {
+  margin-left: -2.5px;
+  transform: rotate(90deg) translateY(7.5px);
+  margin-top: -9px;
+}
+
+.linha-15 .terminal-prata {
+  border-radius: 0 0 10px 10px;
 }
