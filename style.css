@@ -4,6 +4,7 @@
   --linha3: #ef4135;
   --linha4: #ffd400;
   --linha5: #794e9f;
+  --linha9: #00A88E;
   --linha10: #007c8f;
   --linha11: #f04f22;
   --linha15: #848D90;
@@ -13,6 +14,7 @@
   --black: #000000;
   --border: #cccdcf;
   --tiradentes: #cccccc;
+  --corredor: #0053A0;
 }
 
 * {
@@ -186,10 +188,12 @@ body {
 .conexao .estacao.vermelha { color: var(--linha3); }
 .conexao .estacao.amarela { color: var(--linha4); }
 .conexao .estacao.lilas { color: var(--linha5); }
+.conexao .estacao.esmeralda { color: var(--linha9); }
 .conexao .estacao.turquesa { color: var(--linha10); }
 .conexao .estacao.coral { color: var(--linha11); }
 .conexao .estacao.tiradentes { color: var(--tiradentes); }
 .conexao .estacao.prata { color: var(--linha15); }
+.conexao .corredor { color: var(--corredor);}
 
 .linha-1 .ramal-superior {
   margin-bottom: -21px;
@@ -225,6 +229,10 @@ body {
   border-radius: 10px 10px 0 0;
 }
 
+.rotate-90 {
+  transform: rotate(90deg);
+}
+
 .rotate--45 {
   transform: rotate(-45deg);
 }
@@ -234,13 +242,15 @@ body {
 }
 
 .linha.linha-2 .p1 {
+  left: 30px;
+  position: absolute;
   z-index: 1;
 }
 
 .linha.linha-2 .p2 {
-  top: 57.2px;
+  top: 72.2px;
   position: absolute;
-  left: 147px;
+  left: 163px;
 }
 
 .linha.linha-2 .p3 {
@@ -286,7 +296,6 @@ body {
   overflow: hidden;
 }
 
-/* Duas bolinhas na parte preta; a terceira permanece na cápsula branca. */
 .linha-2 .conexao-da-linha-tarifada > .conexao.tarifada {
   width: 100%;
   margin: 0;
@@ -308,7 +317,6 @@ body {
   left: 10px;
 }
 
-/* Linha 15: posição no mapa e ramais independentes em pixels. */
 .linha-15 {
   --cor-linha: var(--linha15);
   left: 1344.5px;
@@ -353,4 +361,68 @@ body {
 
 .linha-15 .terminal-prata {
   border-radius: 0 0 10px 10px;
+}
+
+.linha-4 {
+  --cor-linha: var(--linha4);
+  left: 302px;
+  top: 502px;
+  z-index: 8;
+  transform: rotate(-90deg);
+}
+
+.linha-4 > .p1,
+.linha-4 > .p2,
+.linha-4 > .p3 {
+  position: absolute;
+  width: 10px;
+  margin-top: 0;
+  transform-origin: 5px 0;
+}
+
+.linha-4 .p2 {
+  left: 0;
+  top: 431px;
+  transform: rotate(-45deg);
+}
+
+.linha-4 .p3 {
+  top: 636px;
+  left: 206px;
+}
+
+.linha-4 span {
+  box-shadow: 0 -1px 0 var(--cor-linha), 0 1px 0 var(--cor-linha);
+}
+
+.linha-4 .p1 > .conexao,
+.linha-4 .p2 > .conexao {
+  margin-left: -2.5px;
+}
+
+.linha-4 .passagem-consolacao {
+  display: flex;
+  flex-direction: column;
+  height: 59px;
+}
+
+.linha-4 .conexao.tarifada.vila-sonia {
+  margin-bottom: -10px;
+  margin-left: -10px;
+}
+
+.linha-4 .conexao.tarifada.butanta {
+  margin-top: -10px;
+  margin-left: 6px;
+  margin-bottom: -10px;
+}
+
+.linha-4 .conexao.pinheiros {
+  margin-top: -11px;
+  margin-left: 6px;
+  margin-bottom: -11px;
+}
+
+.linha-4 .conexao.republica {
+  margin-top: -15px;
 }
