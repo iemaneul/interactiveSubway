@@ -4,6 +4,7 @@
   --linha3: #ef4135;
   --linha4: #ffd400;
   --linha5: #794e9f;
+  --linha8: #9F9F94;
   --linha9: #00A88E;
   --linha10: #007c8f;
   --linha11: #f04f22;
@@ -188,6 +189,7 @@ body {
 .conexao .estacao.vermelha { color: var(--linha3); }
 .conexao .estacao.amarela { color: var(--linha4); }
 .conexao .estacao.lilas { color: var(--linha5); }
+.conexao .estacao.diamante { color: var(--linha8); }
 .conexao .estacao.esmeralda { color: var(--linha9); }
 .conexao .estacao.turquesa { color: var(--linha10); }
 .conexao .estacao.coral { color: var(--linha11); }
@@ -227,6 +229,10 @@ body {
 
 .border-top-right {
   border-radius: 10px 10px 0 0;
+}
+
+.border-right-bottom {
+  border-radius: 0px 0px 10px 10px;
 }
 
 .rotate-90 {
@@ -361,6 +367,66 @@ body {
 
 .linha-15 .terminal-prata {
   border-radius: 0 0 10px 10px;
+}
+
+.linha-9 {
+  --cor-linha: var(--linha9);
+  left: 502px;
+  top: 330px;
+  z-index: 7;
+}
+
+.linha-9 > .p1,
+.linha-9 > .p2,
+.linha-9 > .p3,
+.linha-9 > .p4 {
+  position: absolute;
+  width: 10px;
+  margin-top: 0;
+  transform-origin: 5px 0;
+}
+
+.linha-9 .p1 {
+  transform: rotate(-90deg);
+}
+
+.linha-9 .p2 {
+  left: 48px;
+}
+
+.linha-9 .p3 {
+  top: 25px;
+  left: 49.5px;
+  transform: rotate(45deg);
+}
+
+.linha-9 .p4 {
+  left: 20px;
+  top: 53px;
+}
+
+.linha-9 .conexao.osasco {
+  margin-left: 6px;
+  margin-bottom: -12px;
+  transform: rotate(90deg);
+}
+
+.linha-9 .conexao.altino {
+  margin-left: 6px;
+  margin-top: -12px;
+  transform: rotate(90deg);
+}
+
+.linha-9 .conexao.morumbi {
+  margin-left: -2.5px;
+  margin-top: -16px;
+  margin-bottom: -3px;
+}
+
+.linha-9 .conexao.santo-amaro {
+  margin-left: -2.5px;
+  margin-top: -11px;
+  margin-bottom: -3px;
 }
 
 .linha-4 {
