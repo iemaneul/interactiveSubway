@@ -4,11 +4,13 @@
   --linha3: #ef4135;
   --linha4: #ffd400;
   --linha5: #794e9f;
+  --linha7: #A01866;
   --linha8: #9F9F94;
   --linha9: #00A88E;
   --linha10: #007c8f;
   --linha11: #f04f22;
   --linha15: #848D90;
+  --linha17: #928058;
   --ink: #111820;
   --paper: #fdfdfc;
   --white: #ffffff;
@@ -63,8 +65,37 @@ body {
 
 .linha-3 {
   --cor-linha: var(--linha3);
-  left: 960px;
-  top: 0;
+  left: 847px;
+  top: 245px;
+  z-index: 6;
+}
+
+.linha-3 > .p1,
+.linha-3 > .p2,
+.linha-3 > .p3,
+.linha-3 > .p4,
+.linha-3 > .p5 {
+  position: absolute;
+  width: 10px;
+  margin-top: 0;
+  transform-origin: 5px 0;
+}
+
+.linha-3 .p1 .conexao-da-linha {
+  margin-left: -2.5px;
+  margin-bottom: -4px;
+}
+
+.linha-3 .p2 {
+  transform: rotate(-45deg);
+  top: 97px;
+  left: -2px;
+}
+
+.linha-3 .p3 {
+  transform: rotate(-90deg);
+  top: 138px;
+  left: 37px;
 }
 
 .linha .estacao,
@@ -83,7 +114,6 @@ body {
   background-color: var(--cor-linha);
 }
 
-/* Círculo centralizado, independente do alinhamento do caractere ● na fonte. */
 .linha .estacao::after {
   content: "";
   position: absolute;
@@ -104,7 +134,6 @@ body {
   background-color: var(--cor-linha);
 }
 
-/* Cobre as frestas da rotação sem alterar o tamanho ou a posição dos spans. */
 .linha-2 span {
   box-shadow: 0 -1px 0 var(--cor-linha), 0 1px 0 var(--cor-linha);
 }
@@ -189,12 +218,14 @@ body {
 .conexao .estacao.vermelha { color: var(--linha3); }
 .conexao .estacao.amarela { color: var(--linha4); }
 .conexao .estacao.lilas { color: var(--linha5); }
+.conexao .estacao.rubi { color: var(--linha7); }
 .conexao .estacao.diamante { color: var(--linha8); }
 .conexao .estacao.esmeralda { color: var(--linha9); }
 .conexao .estacao.turquesa { color: var(--linha10); }
 .conexao .estacao.coral { color: var(--linha11); }
 .conexao .estacao.tiradentes { color: var(--tiradentes); }
 .conexao .estacao.prata { color: var(--linha15); }
+.conexao .estacao.ouro { color: var(--linha17); }
 .conexao .corredor { color: var(--corredor);}
 
 .linha-1 .ramal-superior {
@@ -266,9 +297,9 @@ body {
 }
 
 .linha.linha-2 .p4 {
-  top: 72px;
+  top: 75px;
   position: absolute;
-  left: 445px;
+  left: 442px;
 }
 
 .linha.linha-2 .p5 {
@@ -282,7 +313,7 @@ body {
 .linha.linha-2 .p6 {
   top: 35px;
   position: absolute;
-  left: 642px;
+  left: 645px;
   transform: rotate(-180deg)
 }
 
@@ -325,7 +356,7 @@ body {
 
 .linha-15 {
   --cor-linha: var(--linha15);
-  left: 1344.5px;
+  left: 1350px;
   top: 443.5px;
   z-index: 8;
 }
@@ -491,4 +522,79 @@ body {
 
 .linha-4 .conexao.republica {
   margin-top: -15px;
+}
+
+.linha-5 {
+  --cor-linha: var(--linha5);
+  left: 358px;
+  top: 842px;
+  z-index: 5;
+}
+
+/* Cobre as frestas da rotação sem alterar os espaçamentos. */
+.linha-3 span,
+.linha-3 > div > .estacao,
+.linha-5 span {
+  box-shadow: 0 -1px 0 var(--cor-linha), 0 1px 0 var(--cor-linha);
+}
+
+.linha-5 > .p1,
+.linha-5 > .p2,
+.linha-5 > .p3,
+.linha-5 > .p4,
+.linha-5 > .p5 {
+  position: absolute;
+  width: 10px;
+  margin-top: 0;
+  transform-origin: 5px 0;
+}
+
+.linha-5 .p1 {
+  transform: rotate(-90deg);
+}
+
+.linha-5 .p1 .diagonal-p1 {
+  transform: rotate(-45deg);
+  top: 3px;
+  position: absolute;
+  right: -51px;
+  z-index: -1;
+}
+
+.linha-5 .p2 {
+  top: -97px;
+  right: -114px;
+  transform: rotate(-90deg);
+  z-index: -2;
+}
+
+.linha-5 .p3 {
+  transform: rotate(-135deg);
+  top: -96px;
+  right: -321px;
+}
+
+.linha-5 .p3 .conexao.tarifada.brooklin {
+  transform: rotate(-90deg);
+  margin-left: 6px;
+  margin-top: -13px;
+  margin-bottom: -20px;
+}
+
+.linha-5 .p3 .conexao.campo-belo {
+  margin: -3px;
+}
+
+.linha-5 .p4 {
+  top: -194px;
+  right: -417px;
+  transform: rotate(-90deg);
+  z-index: -2;
+}
+
+.linha-5 .p5 {
+  top: -194px;
+  right: -640px;
+  transform: rotate(-135deg);
+  z-index: -2;
 }
