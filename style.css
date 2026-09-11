@@ -95,7 +95,7 @@ body {
 .linha-3 .p3 {
   transform: rotate(-90deg);
   top: 138px;
-  left: 37px;
+  left: 38px;
 }
 
 .linha .estacao,
@@ -555,9 +555,9 @@ body {
 
 .linha-5 .p1 .diagonal-p1 {
   transform: rotate(-45deg);
-  top: 3px;
+  top: 1px;
   position: absolute;
-  right: -51px;
+  right: -50px;
   z-index: -1;
 }
 
@@ -597,4 +597,38 @@ body {
   right: -640px;
   transform: rotate(-135deg);
   z-index: -2;
+}
+
+.linha-17 {
+  --cor-linha: var(--linha17);
+  left: 522px;
+  top: 649px;
+}
+
+.linha-17 > .p1,
+.linha-17 > .p2,
+.linha-17 > .p3,
+.linha-17 > .p4,
+.linha-17 > .p5 {
+  position: absolute;
+  width: 10px;
+  margin-top: 0;
+  transform-origin: 5px 0;
+}
+
+.linha-17 .p1 {
+  transform: rotate(-90deg);
+  left: 6px;
+}
+
+.linha-17 .p2 {
+  left: 183px;
+  transform: rotate(-45deg);
+  top: -1px;
+}
+
+.linha-17 .p3 {
+  left: 280px;
+  transform: rotate(-90deg);
+  top: 96px;
 }
