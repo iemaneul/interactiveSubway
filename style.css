@@ -60,13 +60,13 @@ body {
 .linha-2 {
   --cor-linha: var(--linha2);
   left: 687px;
-  top: 356px;
+  top: 383px;
 }
 
 .linha-3 {
   --cor-linha: var(--linha3);
-  left: 847px;
-  top: 245px;
+  left: 823px;
+  top: 261px;
   z-index: 6;
 }
 
@@ -79,6 +79,11 @@ body {
   width: 10px;
   margin-top: 0;
   transform-origin: 5px 0;
+}
+
+.linha-3 .p1 {
+  top: -2px;
+  left: -1px;
 }
 
 .linha-3 .p1 .conexao-da-linha {
@@ -94,8 +99,8 @@ body {
 
 .linha-3 .p3 {
   transform: rotate(-90deg);
-  top: 138px;
-  left: 38px;
+  top: 149.3px;
+  left: 50px;
 }
 
 .linha .estacao,
@@ -244,6 +249,10 @@ body {
   margin-left: 70px;
 }
 
+.linha-1 .ramal-inferior .conexao-do-ramal {
+  margin-bottom: -19px;
+}
+
 .conexao-do-ramal {
   z-index: 1;
   margin-top: -7px;
@@ -279,27 +288,28 @@ body {
 }
 
 .linha.linha-2 .p1 {
-  left: 30px;
+  left: 26px;
+  top: -13px;
   position: absolute;
   z-index: 1;
 }
 
 .linha.linha-2 .p2 {
-  top: 72.2px;
+  top: 72px;
   position: absolute;
-  left: 163px;
+  left: 165px;
 }
 
 .linha.linha-2 .p3 {
   top: 131px;
   position: absolute;
-  left: 273px;
+  left: 275px;
 }
 
 .linha.linha-2 .p4 {
   top: 75px;
   position: absolute;
-  left: 442px;
+  left: 447px;
 }
 
 .linha.linha-2 .p5 {
@@ -357,7 +367,7 @@ body {
 .linha-15 {
   --cor-linha: var(--linha15);
   left: 1350px;
-  top: 443.5px;
+  top: 470px;
   z-index: 8;
 }
 
@@ -376,17 +386,25 @@ body {
 }
 
 .linha-15 > .p2 {
-  top: -1px;
+  top: -1.5px;
   left: 87.5px;
   z-index: -1;
+  background-color: var(--cor-linha);
+}
+
+.linha-15 > .p2 > span,
+.linha-15 > .p2 > .estacao {
+  background-color: transparent;
+  box-shadow: none;
 }
 
 .linha-15 > .p3 {
-  top: 126px;
+  top: 124.5px;
   left: 212px;
 }
 
-.linha-15 span {
+.linha-15 span,
+.linha-15 > div > .estacao:not(.terminal-prata) {
   box-shadow: 0 -1px 0 var(--cor-linha), 0 1px 0 var(--cor-linha);
 }
 
@@ -402,8 +420,8 @@ body {
 
 .linha-9 {
   --cor-linha: var(--linha9);
-  left: 502px;
-  top: 330px;
+  left: 480px;
+  top: 351px;
   z-index: 7;
 }
 
@@ -419,15 +437,18 @@ body {
 
 .linha-9 .p1 {
   transform: rotate(-90deg);
+  left: 3px;
+  top: -11px;
 }
 
 .linha-9 .p2 {
-  left: 48px;
+  left: 50px;
+  top: -18px;
 }
 
 .linha-9 .p3 {
-  top: 25px;
-  left: 49.5px;
+  top: 24px;
+  left: 51px;
   transform: rotate(45deg);
 }
 
@@ -462,8 +483,8 @@ body {
 
 .linha-4 {
   --cor-linha: var(--linha4);
-  left: 302px;
-  top: 502px;
+  left: 279px;
+  top: 531px;
   z-index: 8;
   transform: rotate(-90deg);
 }
@@ -477,15 +498,20 @@ body {
   transform-origin: 5px 0;
 }
 
+.linha-4 .p1 {
+  top: 1px;
+  left: 2px;
+}
+
 .linha-4 .p2 {
-  left: 0;
-  top: 431px;
+  left: 1px;
+  top: 432px;
   transform: rotate(-45deg);
 }
 
 .linha-4 .p3 {
-  top: 636px;
-  left: 206px;
+  top: 651px;
+  left: 222px;
 }
 
 .linha-4 span {
@@ -521,17 +547,16 @@ body {
 }
 
 .linha-4 .conexao.republica {
-  margin-top: -15px;
+  margin-top: -24px;
 }
 
 .linha-5 {
   --cor-linha: var(--linha5);
-  left: 358px;
-  top: 842px;
+  left: 354px;
+  top: 878px;
   z-index: 5;
 }
 
-/* Cobre as frestas da rotação sem alterar os espaçamentos. */
 .linha-3 span,
 .linha-3 > div > .estacao,
 .linha-5 span {
@@ -551,6 +576,8 @@ body {
 
 .linha-5 .p1 {
   transform: rotate(-90deg);
+  top: 0px;
+  left: -1px;
 }
 
 .linha-5 .p1 .diagonal-p1 {
@@ -562,15 +589,15 @@ body {
 }
 
 .linha-5 .p2 {
-  top: -97px;
-  right: -114px;
+  top: -96px;
+  right: -113px;
   transform: rotate(-90deg);
   z-index: -2;
 }
 
 .linha-5 .p3 {
   transform: rotate(-135deg);
-  top: -96px;
+  top: -95px;
   right: -321px;
 }
 
@@ -582,12 +609,14 @@ body {
 }
 
 .linha-5 .p3 .conexao.campo-belo {
-  margin: -3px;
+  margin-left: -2px;
+  margin-top: -6px;
+  margin-bottom: -14px;
 }
 
 .linha-5 .p4 {
   top: -194px;
-  right: -417px;
+  right: -419px;
   transform: rotate(-90deg);
   z-index: -2;
 }
@@ -601,8 +630,9 @@ body {
 
 .linha-17 {
   --cor-linha: var(--linha17);
-  left: 522px;
-  top: 649px;
+  left: 496px;
+  top: 685px;
+  z-index: 4;
 }
 
 .linha-17 > .p1,
@@ -618,17 +648,57 @@ body {
 
 .linha-17 .p1 {
   transform: rotate(-90deg);
+  top: -1px;
   left: 6px;
 }
 
 .linha-17 .p2 {
-  left: 183px;
+  left: 198px;
   transform: rotate(-45deg);
-  top: -1px;
+  top: -2px;
+}
+
+/* Cobre as emendas da diagonal sem mover os módulos ou alterar o terminal. */
+.linha-17 .p2 > span,
+.linha-17 .p2 > .estacao:not(.border-right-bottom) {
+  box-shadow: 0 -1px 0 var(--cor-linha), 0 1px 0 var(--cor-linha);
 }
 
 .linha-17 .p3 {
-  left: 280px;
+  left: 294px;
   transform: rotate(-90deg);
   top: 96px;
+}
+
+.linha-8 {
+  --cor-linha: var(--linha8);
+  left: 870px;
+  top: 323px;
+  z-index: 5;
+  transform: rotate(90deg);
+}
+
+.linha-8 > .p1,
+.linha-8 > .p2 {
+  position: absolute;
+  width: 10px;
+  margin-top: 0;
+  transform-origin: 5px 0;
+}
+
+.linha-8 .conexao.tarifada.diamante {
+  margin-top: -20px;
+  margin-left: 6px;
+  margin-bottom: -11px;
+  z-index: 10;
+  position: relative;
+}
+
+.linha-8 .conexao.tarifada.tripla {
+  margin: -20px 0px;
+}
+
+.linha-8 .ramal-diamante {
+  margin-left: -13px;
+  margin-top: 2px;
 }
