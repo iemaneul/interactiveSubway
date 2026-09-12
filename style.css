@@ -37,6 +37,7 @@ body {
   width: 1920px;
   height: 1100px;
   margin-inline: auto;
+  top: 120px;
 }
 
 .linha {
@@ -701,4 +702,55 @@ body {
 .linha-8 .ramal-diamante {
   margin-left: -13px;
   margin-top: 2px;
+}
+
+/* Cobre as emendas sem afetar as cápsulas nem as pontas arredondadas. */
+.linha-8 span,
+.linha-8 > div > .estacao:not(.border-top-right):not(.border-right-bottom),
+.linha-8 .ramal-diamante > .estacao:not(.border-right-bottom) {
+  box-shadow: 0 -1px 0 var(--cor-linha), 0 1px 0 var(--cor-linha);
+}
+
+.linha-7 {
+  --cor-linha: var(--linha7);
+  left: 815px;
+  top: 308px;
+  z-index: 4;
+  transform: rotate(90deg);
+}
+
+/* Cobre as emendas dos módulos sem alterar o terminal arredondado. */
+.linha-7 span,
+.linha-7 > div > .estacao:not(.border-right-bottom):not(.border-top-right) {
+  box-shadow: 0 -1px 0 var(--cor-linha), 0 1px 0 var(--cor-linha);
+}
+
+.linha-7 > .p1,
+.linha-7 > .p2,
+.linha-7 > .p3,
+.linha-7 > .p4 {
+  position: absolute;
+  width: 10px;
+  margin-top: 0;
+  transform-origin: 5px 0;
+}
+
+.linha-7 .p2 {
+  transform: rotate(45deg);
+  bottom: -297px;
+  left: 1px;
+}
+
+.linha-7 .p3 {
+  transform: rotate(90deg);
+  left: -91px;
+  top: 256px;
+  z-index: -10;
+}
+
+.linha-7 .p4 {
+  transform: rotate(45deg);
+  left: -329px;
+  top: 255px;
+  z-index: -10;
 }
