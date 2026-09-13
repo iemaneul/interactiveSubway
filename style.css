@@ -9,6 +9,7 @@
   --linha9: #00A88E;
   --linha10: #007c8f;
   --linha11: #f04f22;
+  --linha12: #043F89;
   --linha15: #848D90;
   --linha17: #928058;
   --ink: #111820;
@@ -102,6 +103,23 @@ body {
   transform: rotate(-90deg);
   top: 149.3px;
   left: 50px;
+}
+
+.linha-3 .p4 {
+  top: 32px;
+  transform: rotate(45deg);
+  left: 286px;
+}
+
+.linha-3 .p4 .conexao.tarifada {
+  transform: rotate(-90deg);
+  margin: -10px 6px -10px;
+}
+
+.linha-3 .p5 {
+  transform: rotate(-90deg);
+  left: 285px;
+  top: 33px;
 }
 
 .linha .estacao,
@@ -229,6 +247,7 @@ body {
 .conexao .estacao.esmeralda { color: var(--linha9); }
 .conexao .estacao.turquesa { color: var(--linha10); }
 .conexao .estacao.coral { color: var(--linha11); }
+.conexao .estacao.safira { color: var(--linha12); }
 .conexao .estacao.tiradentes { color: var(--tiradentes); }
 .conexao .estacao.prata { color: var(--linha15); }
 .conexao .estacao.ouro { color: var(--linha17); }
@@ -697,6 +716,8 @@ body {
 
 .linha-8 .conexao.tarifada.tripla {
   margin: -20px 0px;
+  z-index: 14;
+  position: relative;
 }
 
 .linha-8 .ramal-diamante {
@@ -753,4 +774,36 @@ body {
   left: -329px;
   top: 255px;
   z-index: -10;
+}
+
+.linha-10 {
+  --cor-linha: var(--linha10);
+  left: 886px;
+  top: 293px;
+  z-index: 7;
+}
+
+.linha-10 > .p1,
+.linha-10 > .p2,
+.linha-10 > .p3,
+.linha-10 > .p4,
+.linha-10 > .p5 {
+  position: absolute;
+  width: 10px;
+  margin-top: 0;
+  transform-origin: 5px 0;
+}
+
+.linha-10 .p1 {
+  transform: rotate(-90deg);
+  left: -57px;
+  top: 2px;
+}
+
+.linha-10 .p1 .conexao {
+  transform: rotate(90deg);
+  margin-top: -37px;
+  margin-left: 6px;
+  z-index: 999;
+  position: relative;
 }
