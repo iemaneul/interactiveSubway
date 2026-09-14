@@ -15,6 +15,7 @@
   --ink: #111820;
   --paper: #fdfdfc;
   --white: #ffffff;
+  --cinza: #818285;
   --black: #000000;
   --border: #cccdcf;
   --tiradentes: #cccccc;
@@ -112,14 +113,24 @@ body {
 }
 
 .linha-3 .p4 .conexao.tarifada {
-  transform: rotate(-90deg);
-  margin: -10px 6px -10px;
+  transform: rotate(-45deg);
+  margin: -10px 5px -24px;
 }
 
 .linha-3 .p5 {
   transform: rotate(-90deg);
-  left: 285px;
-  top: 33px;
+  left: 284px;
+  top: 32.5px;
+}
+
+.linha-3 .p5 > .conexao-da-linha-tarifada {
+  transform: rotate(-90deg);
+  position: relative;
+  top: -31px;
+  left: 2px;
+  padding: 0 0 3px;
+  gap: 0;
+  overflow: hidden;
 }
 
 .linha .estacao,
@@ -222,9 +233,41 @@ body {
   border: none;
 }
 
+.conexao.horaria {
+  margin-left: -2px;
+  background-color: var(--cinza);
+  border: none;
+}
+
+.conexao.horaria.itaquera {
+  transform: rotate(90deg);
+  margin-left: 6px;
+  margin-top: -15px;
+}
+
 .conexao.tarifada .estacao {
   margin: 0;
   background-color: var(--black);
+}
+
+.conexao.horaria .estacao {
+  margin: 0;
+  background-color: var(--cinza);
+}
+
+/* Cápsula horária interna alinhada ao centro da conexão tripla. */
+.linha-3 .conexao-da-linha-tarifada > .conexao.horaria {
+  width: 100%;
+  margin: 0;
+  padding: 3px 0;
+  gap: 0;
+  flex-shrink: 0;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.linha-3 .conexao-da-linha-tarifada > .conexao.horaria > .estacao {
+  background-color: transparent;
 }
 
 .conexao-tarifada-diagonal {
@@ -333,17 +376,17 @@ body {
 }
 
 .linha.linha-2 .p5 {
-  top: 141px;
+  top: 176px;
   position: absolute;
-  left: 615px;
+  left: 606px;
   z-index: -1;
   transform: rotate(45deg);
 }
 
 .linha.linha-2 .p6 {
-  top: 35px;
+  top: 61px;
   position: absolute;
-  left: 645px;
+  left: 619px;
   transform: rotate(-180deg)
 }
 
@@ -386,8 +429,8 @@ body {
 
 .linha-15 {
   --cor-linha: var(--linha15);
-  left: 1350px;
-  top: 470px;
+  left: 1326px;
+  top: 496px;
   z-index: 8;
 }
 
@@ -419,8 +462,8 @@ body {
 }
 
 .linha-15 > .p3 {
-  top: 124.5px;
-  left: 212px;
+  top: 82px;
+  left: 170px;
 }
 
 .linha-15 span,
@@ -431,7 +474,7 @@ body {
 .linha-15 .p3 > .conexao {
   margin-left: -2.5px;
   transform: rotate(90deg) translateY(7.5px);
-  margin-top: -9px;
+  margin-top: -11px;
 }
 
 .linha-15 .terminal-prata {
@@ -715,7 +758,7 @@ body {
 }
 
 .linha-8 .conexao.tarifada.tripla {
-  margin: -20px 0px;
+  margin: -20px -2px;
   z-index: 14;
   position: relative;
 }
@@ -800,10 +843,34 @@ body {
   top: 2px;
 }
 
+.linha-10 .p2 {
+  transform: rotate(-45deg);
+  left: 210px;
+  z-index: -10;
+}
+
+.linha-10 .p3 {
+  left: 241px;
+  top: 28px;
+}
+
+.linha-10 .p4 {
+  left: 239.5px;
+  transform: rotate(-45deg);
+  top: 85px;
+}
+
 .linha-10 .p1 .conexao {
   transform: rotate(90deg);
   margin-top: -37px;
   margin-left: 6px;
   z-index: 999;
   position: relative;
+}
+
+.linha-10 .p4 .conexao.tarifada.tripla {
+  margin: -24px -4px;
+  z-index: 14;
+  position: relative;
+  transform: rotate(135deg);
 }
